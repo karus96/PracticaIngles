@@ -9,6 +9,7 @@ let gameState = {
   currentCategory: null
 };
 
+
 // Títulos personalizados (opcional)
 const categoryTitles = {
   pastSimple: { title: "Verbos: Infinitivo → Pasado simple", colA: "Infinitivo", colB: "Pasado simple" },
