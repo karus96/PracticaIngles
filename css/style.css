@@ -1,6 +1,7 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f5f7fa;
+  background: #1a1a2e;
+  color: #e6e6e6;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +10,7 @@ body {
 }
 
 h1 {
-  color: #2c3e50;
+  color: #e6e6e6;
   margin-bottom: 20px;
 }
 
@@ -28,7 +29,7 @@ h1 {
 
 .column h2 {
   margin-bottom: 12px;
-  color: #34495e;
+  color: #b8b8b8;
 }
 
 .btn {
@@ -38,14 +39,15 @@ h1 {
   font-size: 16px;
   cursor: pointer;
   border: 2px solid #3498db;
-  background: white;
+  background: #2d3748;
+  color: #e6e6e6;
   border-radius: 6px;
   transition: all 0.2s;
   text-align: center;
 }
 
 .btn:hover:not(:disabled):not(.correct) {
-  background: #eaf2f8;
+  background: #4a5568;
 }
 
 .btn.selected {
@@ -54,16 +56,16 @@ h1 {
 }
 
 .btn.correct {
-  background: #2ecc71;
+  background: #27ae60;
   color: white;
-  border-color: #27ae60;
+  border-color: #2ecc71;
   cursor: default;
   font-weight: bold;
 }
 .btn.error {
-  background: #e74c3c;
+  background: #c0392b;
   color: white;
-  border-color: #c0392b;
+  border-color: #e74c3c;
   cursor: default;
   font-weight: bold;
 }
@@ -76,7 +78,7 @@ h1 {
 }
 
 .success {
-  color: #27ae60;
+  color: #2ecc71;
 }
 
 .error {
@@ -86,7 +88,7 @@ h1 {
 #backBtn {
   padding: 10px 20px;
   font-size: 16px;
-  background: #95a5a6;
+  background: #4a5568;
   color: white;
   border: none;
   border-radius: 6px;
@@ -94,7 +96,7 @@ h1 {
 }
 
 #backBtn:hover {
-  background: #7f8c8d;
+  background: #2d3748;
 }
 
 /* Botones dentro de la tabla */
@@ -113,4 +115,21 @@ h1 {
 #gameTable th,
 #gameTable td {
   width: 50%;
+  color: #e6e6e6;
+}
+
+/* Estilos adicionales para la tabla en modo oscuro */
+#gameTable {
+  background: #2d3748;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#gameTable th {
+  background: #4a5568;
+  color: #e6e6e6;
+}
+
+#gameTable td {
+  background: #2d3748;
 }
