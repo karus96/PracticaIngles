@@ -224,28 +224,27 @@ function showSummaryTable(pairs, category) {
   } else if (category === 'phrasalVerbs') {
     titleB = "Traducción";
   }
-
-  let tableHTML = `
-    <h3 style="text-align: center; margin: 20px 0 15px; color: #2c3e50;">Resumen: Verbos y traducciones</h3>
-    <table style="width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+let tableHTML = `
+    <h3 style="text-align: center; margin: 20px 0 15px; color: #e6e6e6;">Resumen: Verbos y traducciones</h3>
+    <table id="gameTable" style="width: 100%; max-width: 600px; margin: 0 auto; border-collapse: collapse; background: #2d3748; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
       <thead>
-        <tr style="background: #2980b9; color: white;">
-          <th style="padding: 12px; text-align: left;">Infinitivo</th>
-          <th style="padding: 12px; text-align: left;">${titleB}</th>
-          <th style="padding: 12px; text-align: left;">Traducción</th>
+        <tr style="background: #4a5568; color: #e6e6e6;">
+          <th style="padding: 12px; text-align: left; border: 1px solid #4a5568;">Infinitivo</th>
+          <th style="padding: 12px; text-align: left; border: 1px solid #4a5568;">${titleB}</th>
+          <th style="padding: 12px; text-align: left; border: 1px solid #4a5568;">Traducción</th>
         </tr>
       </thead>
       <tbody>
   `;
 
   pairs.forEach((pair, index) => {
-    const bgColor = index % 2 === 0 ? '#f8f9fa' : '#ffffff';
+    const bgColor = index % 2 === 0 ? '#2d3748' : '#4a5568';
     const translation = pair.translation || (category === 'phrasalVerbs' ? '—' : '—');
     tableHTML += `
-      <tr style="border-bottom: 1px solid #eaeaea; background: ${bgColor};">
-        <td style="padding: 10px 12px; border: 1px solid #eee;">${pair.a}</td>
-        <td style="padding: 10px 12px; border: 1px solid #eee;">${pair.b}</td>
-        <td style="padding: 10px 12px; border: 1px solid #eee;">${translation}</td>
+      <tr style="border-bottom: 1px solid #4a5568; background: ${bgColor}; color: #e6e6e6;">
+        <td style="padding: 10px 12px; border: 1px solid #4a5568;">${pair.a}</td>
+        <td style="padding: 10px 12px; border: 1px solid #4a5568;">${pair.b}</td>
+        <td style="padding: 10px 12px; border: 1px solid #4a5568;">${translation}</td>
       </tr>
     `;
   });
