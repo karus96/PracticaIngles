@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Botón de regreso
   document.getElementById('backBtn').addEventListener('click', () => {
-    window.location.href = 'menu.html';
+    window.location.href = 'index.html';
   });
   // Botón de reinicio
   document.getElementById('restartBtn').addEventListener('click', () => {
